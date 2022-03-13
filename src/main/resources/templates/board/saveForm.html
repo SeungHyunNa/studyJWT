@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  </head>
+  <head th:replace="/fragments/base.html :: common_header(~{::title},~{::link})">
+    <title>HOME</title>
+    <link>
+  </head>
+  <body class="text-center">
+    
+    <div th:replace="/fragments/nav.html :: fragment-nav"></div>
+    
+    <main class="container p-4 p-md-5 mb-4" style="text-align: left;">
+      <form>
+
+        <div class="form-group mb-2">
+          <input type="title" class="form-control" id="title" placeholder="Title">
+        </div>
+
+        <div class="form-group">
+          <textarea class="form-control summernote" rows="5" id="comment"></textarea>
+        </div>
+
+      </form>
+      <button class="w-100 btn btn-lg btn-primary" id="btn-save" th:text="#{registration}">등록</button>
+    </main>
+
+    <link rel="stylesheet" href="/css/summernote/summernote-lite.css">
+    <div th:replace="/fragments/footer.html :: fragment-footer(~{::script})">
+    <script src="/js/summernote/summernote-lite.js"></script>
+    <script src="/js/summernote/lang/summernote-ko-KR.js"></script>
+    <script src="/js/summernote.js"></script>
+    </div>
+    </body>
+</html>

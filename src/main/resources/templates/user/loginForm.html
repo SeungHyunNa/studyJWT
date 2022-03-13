@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+</head>
+
+<head th:replace="/fragments/base.html :: common_header(~{::title},~{::link})">
+  <title>HOME</title>
+  <link href="/css/signin.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+  <div th:replace="/fragments/nav.html :: fragment-nav"></div>
+
+  <main class="form-signin">
+    <form action="/auth/login" method="post">
+      <!--컨트롤러에 해당 주소 맵핑 안만들고 시큐리티가 가로채게 할것-->
+      <a href="/" class="mor_logo"></a>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        <label for="email">Email address</label>
+        <p class="error_msg text-start text-danger ps-2" id="email_err"></p>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        <label for="password">Password</label>
+        <p class="error_msg text-start text-danger ps-2" id="password_err"></p>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+
+    </form>
+    <p class="error_msg text-danger ps-2"  id="global_err"></p>
+    <button class="w-100 btn btn-lg btn-primary" id="btn-login" th:text="#{signin}">Sign in</button>
+  </main>
+
+  <div th:replace="/fragments/footer.html :: fragment-footer(~{::script})">
+  <script src="/js/auth.js"></script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+#loader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    opacity: 0.8;
+    background: rgb(156, 154, 154);
+    z-index: 99;
+    text-align: center;
+}
+
+#loader>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
+
+.error_msg{
+}
+
+.field-err {
+    border-color: #ea8989;
+    border-width: 2px;
+}
+
+.mor_logo{
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    height: 88px;
+    background-image: url('/images/ribong.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 240px auto;
+    color: transparent;
+    font-size: 0;
+}

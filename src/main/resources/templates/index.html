@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+</head>
+
+<head th:replace="/fragments/base.html :: common_header(~{::title},~{::link})">
+  <title>HOME</title>
+  <link>
+</head>
+
+<body>
+<input type="hidden" id="loginFlg">
+
+  <div th:replace="/fragments/nav.html :: fragment-nav"></div>
+
+  <main class="container m-5">
+    <div class="bg-light p-5 rounded">
+      <h1>Navbar example</h1>
+      <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it
+        will remain fixed to the top of your browser’s viewport.</p>
+      <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
+    </div>
+  </main>
+
+  <div class="card m-2">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  <div class="card m-2">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  <div class="card m-2">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  <div class="card m-2">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+<div th:replace="/fragments/footer.html :: fragment-footer(~{::script})">
+<script></script>
+</div>
+
+</body>
+
+</html>
